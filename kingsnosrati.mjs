@@ -1,3 +1,4 @@
+فرحان:
 import { ethers, parseUnits } from "ethers";
 import { FlashbotsBundleProvider } from "@flashbots/ethers-provider-bundle";
 
@@ -22,8 +23,8 @@ const main = async () => {
   const secureWallet = new ethers.Wallet(secureWalletPrivateKey, provider);
   const compromisedWallet = new ethers.Wallet(compromisedWalletPrivateKey, provider);
 
-  // Check secure wallet ETH balance
-  const secureWalletBalance = await secureWallet.getBalance();
+  // Check secure wallet ETH balance using the provider
+  const secureWalletBalance = await provider.getBalance(secureWallet.address);
   console.log(`Secure Wallet Balance: ${ethers.formatUnits(secureWalletBalance, "ether")} ETH`);
 
   // Estimate gas price and calculate transaction cost
@@ -109,4 +110,6 @@ const main = async () => {
   }
 };
 
-main().catch(console.error);
+main().catch(console.
+
+error);
