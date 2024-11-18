@@ -1,4 +1,3 @@
-فرحان:
 import { ethers, parseUnits } from "ethers";
 import { FlashbotsBundleProvider } from "@flashbots/ethers-provider-bundle";
 
